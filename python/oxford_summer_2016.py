@@ -42,3 +42,20 @@ delphes["pp_hh_bbbb_13TeV"]["files"] = [
     delphes["pp_hh_bbbb_13TeV"]["file_name"].format(i*100000,(i+1)*100000) for i in range(100)
 ]
 
+delphes["pp_hh_bbbb_13TeV_new"] = {}
+
+delphes["pp_hh_bbbb_13TeV_new"]["dir"] = "".join([
+    eos_dir,
+    "signal/non_res_diHiggs/bbbb/"
+])
+delphes["pp_hh_bbbb_13TeV_new"]["base_name"] = "MG5_pp_hh_bbbb_13TeV_10M_py8_Forced"
+delphes["pp_hh_bbbb_13TeV_new"]["file_name"] = "".join([
+    delphes["pp_hh_bbbb_13TeV_new"]["dir"],
+    "Delphes_output_new/",
+    delphes["pp_hh_bbbb_13TeV_new"]["base_name"]+"/",
+    delphes["pp_hh_bbbb_13TeV_new"]["base_name"]+sample_suffix
+])
+delphes["pp_hh_bbbb_13TeV_new"]["files"] = [
+    delphes["pp_hh_bbbb_13TeV_new"]["file_name"].format(i*100000,(i+1)*100000) for i in range(100)
+]
+
